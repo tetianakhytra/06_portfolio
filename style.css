@@ -206,8 +206,9 @@ h3 {
   left: 18%;
 }
 .knap a {
+  z-index: 20;
   color: var(--brown);
-  pointer-events: visible;
+  pointer-events: auto;
   font-family: "Quattrocento Sans";
   font-size: 14px;
   font-weight: 400;
