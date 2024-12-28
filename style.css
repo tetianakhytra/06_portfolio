@@ -1,0 +1,223 @@
+/**
+ * fonte
+ *
+ * @format
+ */
+
+/* 
+font-family: "Baskervville"
+font-family: "Quattrocento" 
+font-family: "Satisfy" 
+*/
+
+:root {
+  --primary: #e7e7dd;
+  --secondary: #b8b1a7;
+  --accent: #7e3549;
+  --brown: #3c2d2a;
+
+  --space-xxs: 0.25rem;
+  --space-xs: 0.8rem;
+  --space-sm: 1rem;
+  --space-md: 1.2rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-xxl: 6rem;
+}
+/*fonts*/
+h1 {
+  font-family: "Satisfy";
+}
+/* menu */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+}
+
+main {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 20px;
+}
+body {
+  background-color: var(--primary);
+}
+header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #7e3549;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  z-index: 20;
+}
+
+.logo img {
+  width: 60px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  margin-right: 20px;
+}
+
+.menu li:last-child {
+  margin-right: 0;
+}
+
+.menu a {
+  display: block;
+  padding: 10px;
+  color: #f8f9f9;
+  text-decoration: none;
+  transition: color 0.3s;
+  text-align: end;
+  font-family: "Baskervville";
+  font-weight: 400;
+}
+
+.menu a:hover {
+  color: #d6eaf8;
+}
+
+.burger {
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.burger .line {
+  width: 100%;
+  height: 2px;
+  background-color: #f8f9f9;
+  margin-bottom: 5px;
+  transition: 0.2s linear;
+}
+.burger {
+  display: none;
+}
+@media screen and (max-width: 800px) {
+  .menu {
+    display: none;
+  }
+  .burger {
+    display: block;
+  }
+  .burger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    transition: 0.2s linear;
+  }
+
+  .burger.active .line:nth-child(2) {
+    opacity: 0;
+    transition: 0.15s linear;
+  }
+
+  .burger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    transition: 0.2s linear;
+  }
+
+  nav.active .menu {
+    display: block;
+    background-color: #7e3549;
+    position: absolute;
+    top: 94px;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+
+  nav.active .menu li {
+    margin: 10px 20px;
+  }
+
+  nav.active .menu a {
+    font-size: 24px;
+  }
+}
+/**************FONTS***********/
+h2 {
+  font-family: "Baskervville";
+  color: var(--brown);
+  font-size: var(--space-sm);
+}
+h3 {
+  font-family: "Baskervville";
+  color: var(--brown);
+  font-size: var(--space-sm);
+}
+
+/*hero*/
+.herosection {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+#hero {
+  width: 100%;
+  height: 45vh;
+}
+.lottie {
+  position: absolute;
+  top: 8%;
+  left: 22%;
+  z-index: 1;
+  object-fit: cover;
+  transform: scale(3.8);
+}
+
+.name {
+  position: absolute;
+  top: 38%;
+  left: 33%;
+  font-size: 1.2rem;
+}
+
+.slogan {
+  font-size: var(--space-xs);
+  position: absolute;
+  top: 42%;
+  left: 18%;
+}
+.knap a {
+  color: var(--brown);
+  pointer-events: visible;
+  font-family: "Quattrocento Sans";
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: underline;
+  text-transform: capitalize;
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  text-align: center;
+  padding: 8px 35px;
+  border-radius: 5px;
+  border: 1px solid #000;
+}
