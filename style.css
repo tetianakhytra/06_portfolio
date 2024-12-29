@@ -24,17 +24,15 @@ font-family: "Satisfy"
   --space-xl: 3rem;
   --space-xxl: 6rem;
 }
-/*fonts*/
-h1 {
-  font-family: "Satisfy";
+/*footer*/
+footer {
+  background-color: var(--accent);
+  height: 50px;
+  margin-top: 30px;
 }
+
 /* menu */
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 * {
   margin: 0;
   padding: 0;
@@ -48,11 +46,12 @@ img {
 main {
   max-width: 1200px;
   margin-inline: auto;
-  padding-inline: 20px;
+  padding-inline: 40px;
 }
 body {
   background-color: var(--primary);
 }
+
 header {
   position: sticky;
   top: 0;
@@ -166,13 +165,19 @@ h2 {
   font-family: "Baskervville";
   color: var(--brown);
   font-size: var(--space-sm);
+  text-align: center;
+  margin-bottom: 1.5rem;
 }
 h3 {
   font-family: "Baskervville";
   color: var(--brown);
   font-size: var(--space-sm);
 }
-
+h1 {
+  font-family: "Satisfy";
+  margin: 25px;
+}
+/**********************INDEX***********************/
 /*hero*/
 .herosection {
   position: relative;
@@ -206,7 +211,7 @@ h3 {
   left: 18%;
 }
 .knap a {
-  z-index: 20;
+  z-index: 10;
   color: var(--brown);
   pointer-events: auto;
   font-family: "Quattrocento Sans";
@@ -221,4 +226,197 @@ h3 {
   padding: 8px 35px;
   border-radius: 5px;
   border: 1px solid #000;
+}
+
+/******image****/
+.img1_1 img {
+  box-shadow: var(--accent) 15px -10px;
+  border-radius: 15px;
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 2rem;
+  display: block;
+}
+/********projekter**********/
+.projekter a {
+  z-index: 20;
+  color: var(--brown);
+  pointer-events: auto;
+  width: 250px;
+  font-size: 14px;
+  text-decoration: underline;
+  text-align: center;
+  padding: 8px 35px;
+  border-radius: 5px;
+  border: 1px solid #000;
+  display: inline-block;
+}
+a:hover {
+  color: var(--accent);
+  background-color: transparent;
+  text-decoration: underline;
+}
+.projekter {
+  margin-top: 25px;
+  margin-left: 20px;
+}
+/*************citat***********/
+.grid1_1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: var(--secondary);
+  margin-top: 3rem;
+  gap: 40px;
+  margin-bottom: 2rem;
+}
+.citat {
+  width: 125%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  margin-left: 10px;
+}
+.citat_text {
+  margin: 40px;
+  text-align: center;
+  font-family: "Baskervville";
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+/***********************GALLERY********/
+.grid1_2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.grid1_2 img {
+  height: 100%;
+  object-fit: cover;
+}
+@media (min-width: 1200px) {
+  .img1_1 img {
+    width: 30%;
+  }
+  #hero {
+    position: relative;
+    width: 100%;
+    height: 82vh;
+    object-fit: cover;
+  }
+
+  .lottie {
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    scale: 2;
+  }
+
+  .name {
+    top: 60%;
+    left: 40%;
+    font-size: 2rem;
+  }
+
+  .slogan {
+    font-size: var(--space-md);
+    position: absolute;
+    top: 68%;
+    left: 34%;
+  }
+  .knap a {
+    font-size: 18px;
+    top: 80%;
+    left: 44%;
+    padding: 10px 45px;
+  }
+  .projekter a {
+    z-index: 30;
+    color: var(--brown);
+    pointer-events: auto;
+    width: 300px;
+    font-size: 18px;
+    text-decoration: underline;
+    text-align: center;
+    padding: 8px 35px;
+    border-radius: 5px;
+    border: 1px solid #000;
+    display: inline-block;
+  }
+  .projekter {
+    margin-left: 40%;
+  }
+  .projekter_h1 {
+    text-align: center;
+  }
+
+  .citat_text {
+    margin-top: 100px;
+    text-align: left;
+    font-family: "Baskervville";
+    font-size: 2rem;
+    text-transform: uppercase;
+  }
+  .grid1_1 {
+    width: 100%;
+    height: 50vh;
+    gap: 20px;
+  }
+  .citat {
+    margin-left: 80px;
+    width: 60%;
+    height: 100%;
+  }
+  .grid1_3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    grid-template-rows: auto;
+    gap: 20px; /* Adjust spacing between items */
+  }
+
+  /* Image 1 spans the first column */
+  .img1 {
+    grid-column: 1; /* Place in the first column */
+    grid-row: span 2; /* Span two rows */
+  }
+
+  .grid1_3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .img1 {
+    grid-column: 1/2;
+    object-fit: cover;
+    width: 90vh;
+    height: auto;
+  }
+
+  .img2 {
+    grid-row: 1;
+    grid-column: 3;
+    height: 100%;
+    width: 60vh;
+    height: auto;
+  }
+  .img3 {
+    grid-row: 5;
+  }
+  .img4 {
+    grid-row: 2;
+    grid-column: 1;
+  }
+  .img5 {
+    grid-row: 3;
+    grid-column: 1;
+  }
+  .grid1_2 {
+    display: grid;
+    grid-template-columns: none;
+  }
+  .spil {
+    grid-column: 3/4;
+    grid-row: 3;
+  }
 }
