@@ -18,20 +18,20 @@ font-family: "Satisfy"
 
   --space-xxs: 0.25rem;
   --space-xs: 0.8rem;
-  --space-sm: 1rem;
-  --space-md: 1.2rem;
-  --space-lg: 2rem;
-  --space-xl: 3rem;
+  --space-sm: 0.9rem; /***h3**/
+  --space-md: 1rem;
+  --space-lg: 2.2rem; /**h1**/
+  --space-xl: 2.6rem;
   --space-xxl: 6rem;
 }
-/*footer*/
+/************footer***********/
 footer {
   background-color: var(--accent);
   height: 50px;
   margin-top: 30px;
 }
 
-/* menu */
+/**************** menu **************/
 
 * {
   margin: 0;
@@ -160,22 +160,59 @@ nav {
     font-size: 24px;
   }
 }
-/**************FONTS***********/
+/**************FONTS og farve***********/
+/* 
+font-family: "Baskervville"
+font-family: "Quattrocento" 
+font-family: "Satisfy" 
+*/
+
+:root {
+  --primary: #e7e7dd;
+  --secondary: #b8b1a7;
+  --accent: #7e3549;
+  --brown: #3c2d2a;
+
+  --space-xxs: 0.25rem;
+  --space-xs: 0.8rem;
+  --space-sm: 0.9rem; /***h3**/
+  --space-md: 1rem;
+  --space-lg: 2.2rem; /**h1**/
+  --space-xl: 2.6rem;
+  --space-xxl: 6rem;
+}
+h1,
 h2 {
+  text-align: center;
+  margin-top: 2rem;
+}
+h2 {
+  font-size: var(--space-md);
+  text-transform: uppercase;
   font-family: "Baskervville";
   color: var(--brown);
-  font-size: var(--space-sm);
+  margin-top: 0.5rem;
   text-align: center;
   margin-bottom: 1.5rem;
 }
 h3 {
   font-family: "Baskervville";
-  color: var(--brown);
   font-size: var(--space-sm);
+  margin: 10px;
+  margin-top: 2rem;
+  color: var(--accent);
+  text-transform: uppercase;
 }
+
+p {
+  font-family: "Quattrocento";
+  font-size: var(--space-xs);
+  line-height: 18px;
+}
+
 h1 {
   font-family: "Satisfy";
-  margin: 25px;
+  font-size: var(--space-lg);
 }
 /**********************INDEX***********************/
 /*hero*/
@@ -407,3 +444,34 @@ a:hover {
     margin-top: 20px;
   }
 }
+/***************************WEB**************************************/
+
+.viden {
+  margin: 20px;
+  margin-left: 40px;
+  max-width: 314px;
+  margin-top: 1rem;
+}
+li {
+  margin-left: 30px;
+  margin-bottom: 10px;
+  line-height: 18px;
+}
+.comp img {
+  margin-top: 20px;
+}
+
+/***************reflexion**********/
+.reflexion {
+  background-color: var(--secondary);
+  padding: 20px;
+  text-align: justify;
+}
+
+.projekt_name {
+  font-size: var(--space-md);
+}
+.teknology {
+  margin-left: 30px;
+}
+/*************carousel**********/
