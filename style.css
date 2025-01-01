@@ -19,7 +19,7 @@ font-family: "Satisfy"
   --space-xxs: 0.25rem;
   --space-xs: 0.8rem;
   --space-sm: 0.9rem; /***h3**/
-  --space-md: 1rem;
+  --space-md: 1rem; /*h2*/
   --space-lg: 2.2rem; /**h1**/
   --space-xl: 2.6rem;
   --space-xxl: 6rem;
@@ -338,9 +338,19 @@ a:hover {
   height: 100%;
   object-fit: cover;
 }
+
+.grid2_2 img {
+  width: 100%;
+  height: auto;
+}
+
 @media (min-width: 1200px) {
   h2 {
     font-size: var(--space-md);
+  }
+  h3 {
+    font-size: var(--space-sm);
+    text-align: right;
   }
   .img1_1 img {
     width: 30%;
@@ -456,28 +466,45 @@ li {
   margin-left: 30px;
   margin-bottom: 10px;
   line-height: 18px;
+  max-width: 50ch;
 }
 .comp img {
   margin-top: 20px;
 }
 
 /***************reflexion**********/
-.reflexion {
+.reflexion_web {
   background-color: var(--secondary);
-  padding: 20px;
+  padding-bottom: 20px;
   text-align: justify;
 }
-
+.reflexion_web p {
+  margin: 0 auto;
+  text-align: justify;
+  max-width: 42ch;
+  font-size: 14px;
+  line-height: 20px;
+}
+.reflexion_web img {
+  margin-bottom: 30px;
+}
 .projekt_name {
-  font-size: var(--space-md);
+  font-size: 1.2rem;
+  margin-top: 3rem;
+  color: var(--accent);
 }
 .teknology {
   margin-left: 30px;
+  font-size: medium;
+}
+.grid2_2 img {
+  display: none;
 }
 
 /*************carousel**********/
 .wiper-item {
   list-style: none;
+  margin: 0 auto;
 }
 body {
   box-sizing: border-box;
@@ -495,35 +522,42 @@ body {
   transition: transform 0.4s ease-in;
   padding: 0 1rem;
   display: grid;
-
-  padding: 0;
+  padding-left: 45px;
+  padding: 10px;
 }
 
 .wiper-wrapper {
-  max-width: 720px;
+  width: 550px;
   overflow: hidden;
-  padding: 2rem 1rem;
+  padding: 3rem 1rem;
   margin: 0 auto;
 }
 
 .wiper-item {
-  width: 340px;
+  width: 600px;
   height: calc(640px * 9 / 16);
   position: relative;
   transition: transform 0.2s linear;
+  filter: grayscale(200%);
 }
 
 .wiper-button img {
   height: 60%;
   width: 60%;
   object-fit: cover;
+  background-color: var(--secondary);
 }
+.wiper-button img:hover {
+  transform: scale(1.2);
+}
+
 .wiper {
-  max-width: 960px;
+  max-width: 600px;
   position: relative;
   margin: 0 auto;
 }
 .active-swipe {
+  filter: none;
   transform: scale(1);
 }
 .wiper-button {
@@ -538,7 +572,7 @@ body {
   z-index: 1;
 }
 .wiper-button__left {
-  right: 35px;
+  right: 5px;
   transform: translateY(-50%) rotate(180deg);
 }
 .wiper__image-button {
@@ -577,7 +611,81 @@ body {
   width: 100%;
   object-fit: cover;
   border-radius: 30px;
+  margin: 0 auto;
 }
 .is-hidden {
   display: none;
+}
+/***************************WEB desktop*********/
+@media (min-width: 1200px) {
+  .grid2_1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 60px;
+    width: 147ch;
+    margin: 0 auto;
+    text-align: justify;
+    line-height: 1.6;
+    margin-top: 3rem;
+  }
+  .reflexion_web {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    background-color: var(--secondary);
+    margin: 0 auto;
+    gap: 10px;
+  }
+  .reflexion_web img {
+    margin-left: 40%;
+    width: 60%;
+    margin-bottom: -22.5px;
+  }
+  .reflexion_web p {
+    font-size: var(--space-md);
+    max-width: 42ch;
+    text-align: justify;
+    line-height: 1.3;
+  }
+  .reflexion_web h2 {
+    margin-top: 2rem;
+    text-align: center;
+  }
+  .projekt_name {
+    color: var(--accent);
+    margin-bottom: 3rem;
+  }
+  .grid2_2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+  .grid2_2 img {
+    width: 80%;
+    height: auto;
+  }
+  /**********webslider_desktop*****/
+  .wiper {
+    max-width: 700px;
+    position: relative;
+    margin: 0 auto;
+  }
+  .wiper-item {
+    width: 440px;
+    height: calc(640px * 9 / 16);
+    position: relative;
+    transition: transform 0.2s linear;
+  }
+  .wiper-wrapper {
+    max-width: 460px;
+    overflow: hidden;
+    padding: 1rem 0.5rem;
+    margin: 0 auto;
+  }
+  .projekt_name {
+    margin-top: 3rem;
+  }
 }

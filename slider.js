@@ -23,23 +23,16 @@ const wipeSlide = (wiperTrack, activeSlide, targetIndex) => {
   if (targetIndex < 0 || targetIndex >= wipes.length) return; // Prevent invalid indices
 
   // Correct transform calculation
-  const translateX = targetIndex * (wipeWidth + 46); // Slide width + spacing
+  const translateX = targetIndex * (wipeWidth + 16); // Slide width + spacing
   wiperTrack.style.transform = `translateX(-${translateX}px)`;
 
-  // Update all slides
-  wipes.forEach((slide, index) => {
-    if (index === targetIndex) {
-      // Active slide
-      slide.classList.add("active-swipe");
-      slide.style.transform = "scale(1.1)";
-      slide.style.filter = "none"; // No grayscale for active
-    } else {
-      // Non-active slides
-      slide.classList.remove("active-swipe");
-      slide.style.transform = "scale(1)";
-      slide.style.filter = "grayscale(5)"; // Apply grayscale for non-active
-    }
-  });
+  // Update active classes
+  activeSlide.classList.remove("active-swipe");
+  wipes[targetIndex].classList.add("active-swipe");
+
+  // Update scale effect
+  activeSlide.style.transform = "scale(1)";
+  wipes[targetIndex].style.transform = "scale(1.1)";
 };
 
 wipeNextBtn.addEventListener("click", () => {
@@ -49,6 +42,7 @@ wipeNextBtn.addEventListener("click", () => {
   // Ensure the next slide is within bounds
   const targetIndex = Math.min(currentIndex + 1, wipes.length - 1);
 
+  // Handle transition to next slide
   wipeSlide(wiperTrack, activeSlide, targetIndex);
   arrowsBehaviour(wipePrevBtn, wipeNextBtn, targetIndex);
 });
@@ -60,6 +54,7 @@ wipePrevBtn.addEventListener("click", () => {
   // Ensure the previous slide is within bounds
   const targetIndex = Math.max(currentIndex - 1, 0);
 
+  // Handle transition to previous slide
   wipeSlide(wiperTrack, activeSlide, targetIndex);
   arrowsBehaviour(wipePrevBtn, wipeNextBtn, targetIndex);
 });
@@ -69,10 +64,6 @@ window.addEventListener("DOMContentLoaded", () => {
   const firstSlide = wipes[0];
   firstSlide.classList.add("active-swipe");
   firstSlide.style.transform = "scale(1.1)";
-  firstSlide.style.filter = "none"; // Remove grayscale for the first slide
-
-  // Apply grayscale to all non-active slides
-  wipes.slice(1).forEach((slide) => (slide.style.filter = "grayscale(5)"));
 
   // Hide the previous button initially
   wipePrevBtn.classList.add("is-hidden");
