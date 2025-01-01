@@ -23,7 +23,7 @@ const wipeSlide = (wiperTrack, activeSlide, targetIndex) => {
   if (targetIndex < 0 || targetIndex >= wipes.length) return; // Prevent invalid indices
 
   // Correct transform calculation
-  const translateX = targetIndex * (wipeWidth + 16); // Slide width + spacing
+  const translateX = targetIndex * (wipeWidth + 26); // Slide width + spacing
   wiperTrack.style.transform = `translateX(-${translateX}px)`;
 
   // Update active classes
@@ -32,7 +32,7 @@ const wipeSlide = (wiperTrack, activeSlide, targetIndex) => {
 
   // Update scale effect
   activeSlide.style.transform = "scale(1)";
-  wipes[targetIndex].style.transform = "scale(1.1)";
+  wipes[targetIndex].style.transform = "scale(1.)";
 };
 
 wipeNextBtn.addEventListener("click", () => {

@@ -19,7 +19,7 @@ font-family: "Satisfy"
   --space-xxs: 0.25rem;
   --space-xs: 0.8rem;
   --space-sm: 0.9rem; /***h3**/
-  --space-md: 1rem; /*h2*/
+  --space-md: 1.4rem; /*h2*/
   --space-lg: 2.2rem; /**h1**/
   --space-xl: 2.6rem;
   --space-xxl: 6rem;
@@ -228,7 +228,7 @@ h1 {
 .lottie {
   position: absolute;
   top: 8%;
-  left: 22%;
+  left: 20%;
   z-index: 1;
   object-fit: cover;
   transform: scale(3.8);
@@ -237,22 +237,26 @@ h1 {
 .name {
   position: absolute;
   top: 38%;
-  left: 33%;
+  left: 52%;
+  transform: translate(-50%, -50%);
+  text-align: center;
   font-size: 1.2rem;
 }
 
 .slogan {
   font-size: var(--space-xs);
   position: absolute;
-  top: 42%;
-  left: 18%;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 .knap a {
   z-index: 10;
   color: var(--brown);
   pointer-events: auto;
   font-family: "Quattrocento Sans";
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
   text-decoration: underline;
   text-transform: capitalize;
@@ -260,7 +264,7 @@ h1 {
   top: 50%;
   left: 40%;
   text-align: center;
-  padding: 8px 35px;
+  padding: 8px 30px;
   border-radius: 5px;
   border: 1px solid #000;
 }
@@ -280,8 +284,8 @@ h1 {
   z-index: 20;
   color: var(--brown);
   pointer-events: auto;
+
   width: 250px;
-  font-size: 14px;
   text-decoration: underline;
   text-align: center;
   padding: 8px 35px;
@@ -298,7 +302,7 @@ a:hover {
   margin-top: 25px;
   margin-left: 22%;
 }
-.projekter_h1 {
+.projekter_h3 {
   text-align: center;
 }
 /*************citat***********/
@@ -339,18 +343,13 @@ a:hover {
   object-fit: cover;
 }
 
-.grid2_2 img {
-  width: 100%;
-  height: auto;
-}
-
 @media (min-width: 1200px) {
   h2 {
     font-size: var(--space-md);
   }
   h3 {
     font-size: var(--space-sm);
-    text-align: right;
+    text-align: left;
   }
   .img1_1 img {
     width: 30%;
@@ -371,21 +370,25 @@ a:hover {
 
   .name {
     top: 60%;
-    left: 40%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    text-align: center;
     font-size: 2rem;
   }
 
   .slogan {
     font-size: var(--space-md);
     position: absolute;
-    top: 68%;
-    left: 34%;
+    top: 64%;
+    left: 47%;
+    transform: translate(-50%, -50%);
+    text-align: center;
   }
   .knap a {
     font-size: 18px;
-    top: 80%;
-    left: 44%;
-    padding: 10px 45px;
+    top: 75%;
+    left: 43%;
+    padding: 10px 35px;
   }
   .projekter a {
     z-index: 20;
@@ -534,8 +537,8 @@ body {
 }
 
 .wiper-item {
-  width: 600px;
-  height: calc(640px * 9 / 16);
+  width: 640px;
+  height: calc(600px * 9 / 16);
   position: relative;
   transition: transform 0.2s linear;
   filter: grayscale(200%);
@@ -552,7 +555,7 @@ body {
 }
 
 .wiper {
-  max-width: 600px;
+  max-width: 640px;
   position: relative;
   margin: 0 auto;
 }
@@ -588,7 +591,7 @@ body {
   cursor: pointer;
 }
 .wiper-wrapper {
-  max-width: 660px;
+  max-width: 800px;
   overflow: hidden;
   padding: 2rem 0.5rem;
   margin: 0 auto;
@@ -607,15 +610,20 @@ body {
 }
 
 .wiper__image {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
+  height: 90%;
+  width: 90%;
+
   border-radius: 30px;
   margin: 0 auto;
 }
 .is-hidden {
   display: none;
 }
+/****************************UX/UI mobil*******************/
+.forstoelse_1 {
+  margin: 2rem;
+}
+
 /***************************WEB desktop*********/
 @media (min-width: 1200px) {
   .grid2_1 {
@@ -664,6 +672,7 @@ body {
     max-width: 1200px;
   }
   .grid2_2 img {
+    display: block;
     width: 80%;
     height: auto;
   }
@@ -687,5 +696,18 @@ body {
   }
   .projekt_name {
     margin-top: 3rem;
+  }
+
+  /**************************UX/UI********************/
+  .grid3_1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 auto;
+    gap: 50px;
+    width: 1000px;
+    height: 300px;
+  }
+  .grid2_1_1 {
+    margin-top: 1.8rem;
   }
 }
