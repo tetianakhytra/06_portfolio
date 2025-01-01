@@ -1,70 +1,73 @@
-/** @format */
+/**
+ * global $
+ *
+ * @format
+ */
 
-const wiperTrack = document.querySelector(".wiper-track");
-const wipes = Array.from(wiperTrack.children);
-const wipePrevBtn = document.querySelector(".wiper-button__right");
-const wipeNextBtn = document.querySelector(".wiper-button__left");
-const wipeWidth = wipes[0].getBoundingClientRect().width;
+/*
 
-const arrowsBehaviour = (wipePrevBtn, wipeNextBtn, index) => {
-  if (index === 0) {
-    wipePrevBtn.classList.add("is-hidden");
-    wipeNextBtn.classList.remove("is-hidden");
-  } else if (index === wipes.length - 1) {
-    wipePrevBtn.classList.remove("is-hidden");
-    wipeNextBtn.classList.add("is-hidden");
-  } else {
-    wipePrevBtn.classList.remove("is-hidden");
-    wipeNextBtn.classList.remove("is-hidden");
-  }
-};
+ *** NOTE : i wasn't able to make this without (elzero web scholl) ***
+ 
+ */
 
-const wipeSlide = (wiperTrack, activeSlide, targetIndex) => {
-  if (targetIndex < 0 || targetIndex >= wipes.length) return; // Prevent invalid indices
+$(document).ready(function () {
+  "use strict";
 
-  // Correct transform calculation
-  const translateX = targetIndex * (wipeWidth + 26); // Slide width + spacing
-  wiperTrack.style.transform = `translateX(-${translateX}px)`;
+  // center the slider content on load
 
-  // Update active classes
-  activeSlide.classList.remove("active-swipe");
-  wipes[targetIndex].classList.add("active-swipe");
+  $(".slider .slides .img .overlay").each(function () {
+    $(this).css({ paddingTop: ($(window).height() - $(".text").height()) / 2 });
+  });
 
-  // Update scale effect
-  activeSlide.style.transform = "scale(1)";
-  wipes[targetIndex].style.transform = "scale(1.)";
-};
+  // center the slider content on resize
 
-wipeNextBtn.addEventListener("click", () => {
-  const activeSlide = wiperTrack.querySelector(".active-swipe");
-  const currentIndex = wipes.findIndex((slide) => slide === activeSlide);
+  $(window).resize(function () {
+    $(".slider .slides .img .overlay").each(function () {
+      $(this).css({ paddingTop: ($(window).height() - $(".text").height()) / 2 });
+    });
+  });
 
-  // Ensure the next slide is within bounds
-  const targetIndex = Math.min(currentIndex + 1, wipes.length - 1);
+  // slider next button
 
-  // Handle transition to next slide
-  wipeSlide(wiperTrack, activeSlide, targetIndex);
-  arrowsBehaviour(wipePrevBtn, wipeNextBtn, targetIndex);
-});
+  $(".fa-arrow-right").on("click", function () {
+    $(".slider .slides.active").each(function () {
+      // is this is not the last child , fade in the next slide
 
-wipePrevBtn.addEventListener("click", () => {
-  const activeSlide = wiperTrack.querySelector(".active-swipe");
-  const currentIndex = wipes.findIndex((slide) => slide === activeSlide);
+      if (!$(this).is(":last-child")) {
+        $(this).fadeOut(1000, function () {
+          $(this).removeClass("active").next().fadeIn(1000).addClass("active");
+        });
 
-  // Ensure the previous slide is within bounds
-  const targetIndex = Math.max(currentIndex - 1, 0);
+        // if this is the last slide , go to the first slide
+      } else {
+        $(this)
+          .removeClass("active")
+          .fadeOut(1000, function () {
+            $(".slider .slides").eq(0).fadeIn(1000).addClass("active");
+          });
+      }
+    });
+  });
 
-  // Handle transition to previous slide
-  wipeSlide(wiperTrack, activeSlide, targetIndex);
-  arrowsBehaviour(wipePrevBtn, wipeNextBtn, targetIndex);
-});
+  // slider previous button
 
-// Ensure the first image is the active slide on load
-window.addEventListener("DOMContentLoaded", () => {
-  const firstSlide = wipes[0];
-  firstSlide.classList.add("active-swipe");
-  firstSlide.style.transform = "scale(1.1)";
+  $(".fa-arrow-left").on("click", function () {
+    $(".slider .slides.active").each(function () {
+      // if is not the first slide , fade in the previous slides
 
-  // Hide the previous button initially
-  wipePrevBtn.classList.add("is-hidden");
+      if (!$(this).is(":first-child")) {
+        $(this).fadeOut(1000, function () {
+          $(this).removeClass("active").prev().fadeIn(1000).addClass("active");
+        });
+
+        // if is the first slide , go to the last slide
+      } else {
+        $(this)
+          .removeClass("active")
+          .fadeOut(1000, function () {
+            $(".slider .slides").eq(2).fadeIn(1000).addClass("active");
+          });
+      }
+    });
+  });
 });
