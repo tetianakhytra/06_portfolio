@@ -46,52 +46,16 @@
         </nav>
     </header>
     <h1>Grundlæggende UX / UI</h1>
-    <h2>centrale metoder og teorier inden for brugeroplevelse (UX) og brugergrænseflader (UI)</h2>
+    <h2>centrale metoder og teorier</h2>
 
 
 
 
 
     <div class="grid3_1">
-
         <div>
-            <h2>Viden:</h2>
-            <h3><strong>Brugerforståelse:</strong></h3>
-            <ul class="viden:">
-                <li>
-                    Indsamling og analyse af brugerdata gennem metoder som
-                    tænke-højt-test og 5-sekunders test.
-                </li>
-                <li>Udarbejdelse af brugerhistorier og empiri til at guide design- og udviklingsprocessen.
-                </li>
-            </ul>
-            <h3><strong>UX/UI Design:</strong> </h3>
-            <ul>
-                <li>Arbejde med designværktøjer som Figma til at skabe wireframes, prototyper og mock-ups.</li>
-                <li>Anvendelse af grafisk analyse, moodboards og styletiles til at definere visuelle identiteter.
-                </li>
-                <li>Iteration af design baseret på brugerindsigter og optimering af løsninger.</li>
-            </ul>
-        </div>
-        <div class="grid2_1_1">
-            <h3><strong>Webudvikling:</strong></h3>
-            <ul>
-                <li>Udvikling af et fuldt funktionelt website baseret på en digital prototype.</li>
-                <li>Integration af HTML, CSS og JavaScript i design- og udviklingsprocessen.
-                </li>
-            </ul>
-            <h3><strong>Testing og Evaluering:</strong></h3>
-            <ul>
-                <li>Gennemførelse af usability tests med værktøjer som Lighthouse og dokumentation af resultaterne.
-                </li>
-            </ul>
-
-
-        </div>
-
-        <div>
-            <h2 class="Færdigheder3_1">Færdigheder:</h2>
-            <ul class="forstoelse">
+            <h3>Færdigheder:</h3>
+            <ul class="forstoelse_1">
                 <li>Udarbejdelse af designbriefs og planlægning af UX/UI-processer.
                 </li>
                 <li>Udførelse af brugerundersøgelser og analyse af brugssituationer.
@@ -102,11 +66,46 @@
 
             </ul>
         </div>
+
+        <div>
+            <h3>Viden:</h3>
+            <ul>
+                <li> Brugerforståelse:
+                    Indsamling og analyse af brugerdata gennem metoder som
+                    tænke-højt-test og 5-sekunders test.
+                </li>
+                <li>Udarbejdelse af brugerhistorier og empiri til at guide design- og udviklingsprocessen.
+                </li>
+
+                <li>Arbejde med designværktøjer som Figma til at skabe wireframes, prototyper og mock-ups.</li>
+                <li>Anvendelse af grafisk analyse, moodboards og styletiles til at definere visuelle identiteter.
+                </li>
+            </ul>
+        </div>
+
+        <div class="Webudvikling">
+            <ul>
+                <li>Webudvikling:
+                    Udvikling af et fuldt funktionelt website baseret på en digital prototype.</li>
+                <li>Integration af HTML, CSS og JavaScript i design- og udviklingsprocessen.
+                </li>
+
+                <li>Testing og Evaluering:
+                    Gennemførelse af usability tests med værktøjer som Lighthouse og dokumentation af resultaterne.
+                </li>
+            </ul>
+
+
+        </div>
+
+
     </div>
+
+
     <div class="reflexion_web">
 
-        <div><img src="other/3_1.webp" alt="work"></div>
-        <div>
+        <div><img class="reflexion_ux_img" src="other/3_1.webp" alt="work"></div>
+        <div class="reflexion_ux_tekst">
             <h2>REFLEXION</h2>
             <p>I dette projekt udviklede jeg en hjemmeside om min hobby – broderi. Mit mål var at skabe en platform, der
                 gav
@@ -120,7 +119,8 @@
         </div>
     </div>
     <h2 class="projekt_name">EMNESITE</h2>
-    <h3>udvikling af et website om broderi</h3>
+
+
     <div class="grid2_2">
         <div>
             <h3>Projektet inkluderede:</h3>
@@ -137,25 +137,94 @@
             </ul>
 
             <h3>Teknologier Brugte:</h3>
-            <p class="teknology"><strong>Figma, HTML, CSS, JavaScript, Lighthouse, browser developer tools,
+            <p class="teknology"><strong>Figma, HTML, CSS, JavaScript,<br> Lighthouse, browser developer tools,
                     CodePen.</strong></p>
         </div>
+
         <div><img src="emnesite/emnesite.webp" alt="emnesite"></div>
 
     </div>
-    <h2 class="projekt_name">MIT FØRSTE WEBSITE</h2>
+
+    <h2 class="projekt_name">fra ide til færdigt website</h2>
+
 
     <base href="emnesite">
-    <div id="slider">
-        <figure>
-            <img src="emnesite/research_1.webp" alt>
-            <img src="emnesite/1.webp" alt>
-            <img src="emnesite/2.webp" alt>
-            <img src="emnesite/4.webp" alt>
-            <img src="emnesite/5.webp" alt>
-        </figure>
-    </div>
+    <ul class="slides">
+        <input type="radio" name="radio-btn" id="img-1" checked />
+        <li class="slide-container">
+            <div class="slide">
+                <img src="emnesite/1.webp" />
+            </div>
+            <div class="nav">
+                <label for="img-6" class="prev">&#x2039;</label>
+                <label for="img-2" class="next">&#x203a;</label>
+            </div>
+        </li>
 
+        <input type="radio" name="radio-btn" id="img-2" />
+        <li class="slide-container">
+            <div class="slide">
+                <img src="emnesite/9.webp" />
+            </div>
+            <div class="nav">
+                <label for="img-1" class="prev">&#x2039;</label>
+                <label for="img-3" class="next">&#x203a;</label>
+            </div>
+        </li>
+
+        <input type="radio" name="radio-btn" id="img-3" />
+        <li class="slide-container">
+            <div class="slide">
+                <img src="emnesite/4.webp" />
+            </div>
+            <div class="nav">
+                <label for="img-2" class="prev">&#x2039;</label>
+                <label for="img-4" class="next">&#x203a;</label>
+            </div>
+        </li>
+
+        <input type="radio" name="radio-btn" id="img-4" />
+        <li class="slide-container">
+            <div class="slide">
+                <img src="emnesite/5.webp" />
+            </div>
+            <div class="nav">
+                <label for="img-3" class="prev">&#x2039;</label>
+                <label for="img-5" class="next">&#x203a;</label>
+            </div>
+        </li>
+
+        <input type="radio" name="radio-btn" id="img-5" />
+        <li class="slide-container">
+            <div class="slide">
+                <img src="emnesite/6.webp" />
+            </div>
+            <div class="nav">
+                <label for="img-4" class="prev">&#x2039;</label>
+                <label for="img-6" class="next">&#x203a;</label>
+            </div>
+        </li>
+
+        <input type="radio" name="radio-btn" id="img-6" />
+        <li class="slide-container">
+            <div class="slide">
+                <img src="emnesite/7.webp" />
+            </div>
+            <div class="nav">
+                <label for="img-5" class="prev">&#x2039;</label>
+                <label for="img-1" class="next">&#x203a;</label>
+            </div>
+        </li>
+
+        <li class="nav-dots">
+            <label for="img-1" class="nav-dot" id="img-dot-1"></label>
+            <label for="img-2" class="nav-dot" id="img-dot-2"></label>
+            <label for="img-3" class="nav-dot" id="img-dot-3"></label>
+            <label for="img-4" class="nav-dot" id="img-dot-4"></label>
+            <label for="img-5" class="nav-dot" id="img-dot-5"></label>
+            <label for="img-6" class="nav-dot" id="img-dot-6"></label>
+        </li>
+    </ul>
 
 
 
