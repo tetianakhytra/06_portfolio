@@ -177,10 +177,15 @@ font-family: "Satisfy"
   --space-xxs: 0.25rem;
   --space-xs: 0.8rem;
   --space-sm: 0.9rem; /***h3**/
-  --space-md: 1rem;
+  --space-md: 1rem; /*h2*/
   --space-lg: 2.2rem; /**h1**/
   --space-xl: 2.6rem;
   --space-xxl: 6rem;
+}
+p {
+  font-family: "Quattrocento";
+  line-height: 1.5;
+  font-size: var(--space-xs);
 }
 h1,
 h2 {
@@ -207,10 +212,13 @@ h3 {
   text-transform: uppercase;
 }
 
-p ul {
+ul {
+  margin-left: 30px;
   font-family: "Quattrocento";
   font-size: var(--space-xs);
   line-height: 18px;
+  width: 45ch;
+  margin-bottom: 30px;
 }
 
 h1 {
@@ -255,6 +263,16 @@ h1 {
   transform: translate(-50%, -50%);
   text-align: center;
 }
+.img1_1 img {
+  box-shadow: var(--accent) 15px -10px;
+  border-radius: 15px;
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 2rem;
+  display: block;
+}
+/*************knap****************/
 .knap a {
   z-index: 10;
   color: var(--brown);
@@ -272,17 +290,28 @@ h1 {
   border-radius: 5px;
   border: 1px solid #000;
 }
-
-/******image****/
-.img1_1 img {
-  box-shadow: var(--accent) 15px -10px;
-  border-radius: 15px;
-  width: 80%;
-  height: auto;
+.link a {
+  z-index: 10;
+  color: var(--brown);
+  pointer-events: auto;
+  font-family: "Quattrocento Sans";
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: underline;
+  text-transform: capitalize;
   margin: 0 auto;
-  margin-top: 2rem;
-  display: block;
+  text-align: center;
+  padding: 8px 26px;
+  border-radius: 5px;
+  border: 1.5px solid #000;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 30px;
 }
+.link {
+  margin-top: 30px;
+}
+
 /********projekter**********/
 .projekter a {
   z-index: 20;
@@ -337,9 +366,8 @@ a:hover {
   font-size: 1rem;
   text-transform: uppercase;
 }
-/***********************GALLERY********/
+/*************GALLERY fra codepen********/
 :hover .grid1_3 img:not(:hover) {
-  /***from Codepen***/
   filter: saturate(0.2) opacity(0.5);
 }
 .grid1_2 {
@@ -353,8 +381,16 @@ a:hover {
   height: 100%;
   object-fit: cover;
 }
+.hide_mobil {
+  display: none;
+}
+/**************************DESKTOP**************/
 
 @media (min-width: 1200px) {
+  /****fonts****/
+  p {
+    font-size: var(--space-xs);
+  }
   h2 {
     font-size: var(--space-md);
   }
@@ -499,11 +535,7 @@ li {
   color: var(--accent);
 }
 .teknology {
-  margin-left: 30px;
-  font-size: medium;
-}
-.grid2_2 img {
-  display: none;
+  margin-left: 60px;
 }
 
 /***********************************************carousel********************************/
@@ -615,9 +647,25 @@ input:checked + .slide-container .nav label {
   position: absolute;
   text-align: center;
 }
+/**************************inhold**********************/
 
+.grid4_2_img {
+  margin-top: 40px;
+}
 /***************************WEB desktop*********/
 @media (min-width: 1200px) {
+  .grid4_2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+  .grid4_2_img {
+    width: 70%;
+    margin-left: 20%;
+  }
   .grid2_1 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -657,9 +705,9 @@ input:checked + .slide-container .nav label {
 
     border-radius: 15px;
     display: block;
-    width: 85%;
+    width: 90%;
     height: auto;
-    margin-top: 2.5rem;
+    margin-top: 4.6rem;
     margin-left: 5rem;
   }
 
@@ -845,6 +893,12 @@ input:checked + .slide-container .nav label {
     max-width: 55ch;
     text-align: justify;
     padding: 20px;
+  }
+  .hide_desktop {
+    display: none;
+  }
+  .hide_mobil {
+    display: block;
   }
   /***************************************ANIMATIOM**********************/
   .grid4_1 {
