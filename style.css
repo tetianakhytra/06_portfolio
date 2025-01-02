@@ -95,6 +95,7 @@ nav {
   text-decoration: none;
   transition: color 0.3s;
   text-align: end;
+  font-size: 16px;
   font-family: "Baskervville";
   font-weight: 400;
 }
@@ -287,7 +288,7 @@ h1 {
   z-index: 20;
   color: var(--brown);
   pointer-events: auto;
-
+  font-size: var(--space-xs);
   width: 250px;
   text-decoration: underline;
   text-align: center;
@@ -305,7 +306,7 @@ a:hover {
   margin-top: 25px;
   margin-left: 22%;
 }
-.projekter_h3 {
+.projekter h3 {
   text-align: center;
   margin-bottom: 2rem;
 }
@@ -323,20 +324,14 @@ a:hover {
   margin-top: 1rem;
 }
 .grid1_1 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
   background-color: var(--secondary);
-  margin-top: 3rem;
-  gap: 40px;
-  margin-bottom: 2rem;
 }
 .citat {
-  width: 125%;
   height: 100%;
   object-fit: cover;
 }
 .citat_text {
-  margin: 40px;
+  padding: 100px;
   text-align: center;
   font-family: "Baskervville";
   font-size: 1rem;
@@ -436,7 +431,14 @@ a:hover {
     z-index: 10;
     position: relative;
   }
-
+  .grid1_1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: var(--secondary);
+    margin-top: 3rem;
+    gap: 40px;
+    margin-bottom: 2rem;
+  }
   .citat_text {
     margin-top: 130px;
     text-align: left;
@@ -556,8 +558,8 @@ li {
 }
 
 .nav label {
-  width: 200px;
-  height: 100%;
+  width: 180px;
+  height: 55%;
   display: none;
   position: absolute;
 
@@ -568,9 +570,9 @@ li {
   transition: opacity 0.2s;
 
   color: #fff;
-  font-size: 156pt;
+  font-size: 116pt;
   text-align: center;
-  line-height: 380px;
+  line-height: 200px;
   font-family: "Varela Round", sans-serif;
   background-color: rgba(255, 255, 255, 0.3);
   text-shadow: 0px 0px 15px rgb(119, 119, 119);
@@ -586,6 +588,11 @@ li {
 
 .nav .next {
   right: 20%;
+  top: 15%;
+}
+.nav .prev {
+  top: 15%;
+  left: -10%;
 }
 
 input:checked + .slide-container .slide {
@@ -642,13 +649,18 @@ input:checked + .slide-container .nav label {
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 1000px;
+    gap: 20px;
   }
   .grid2_2 img {
+    box-shadow: var(--accent) 15px -10px;
+
+    border-radius: 15px;
     display: block;
-    width: 100%;
+    width: 85%;
     height: auto;
-    margin-top: 1.6rem;
+    margin-top: 2.5rem;
+    margin-left: 5rem;
   }
 
   /*************carousel**********/
@@ -701,11 +713,11 @@ input:checked + .slide-container .nav label {
   }
 
   .nav label {
-    width: 200px;
-    height: 100%;
+    width: 180px;
+    height: 60%;
     display: none;
     position: absolute;
-
+    bottom: 25%;
     opacity: 0;
     z-index: 9;
     cursor: pointer;
@@ -715,7 +727,7 @@ input:checked + .slide-container .nav label {
     color: #fff;
     font-size: 156pt;
     text-align: center;
-    line-height: 380px;
+    line-height: 280px;
     font-family: "Varela Round", sans-serif;
     background-color: rgba(255, 255, 255, 0.3);
     text-shadow: 0px 0px 15px rgb(119, 119, 119);
@@ -731,6 +743,11 @@ input:checked + .slide-container .nav label {
 
   .nav .next {
     right: 0;
+    bottom: 60%;
+  }
+  .nav .prev {
+    right: 70%;
+    bottom: 2%;
   }
 
   input:checked + .slide-container .slide {
@@ -776,7 +793,7 @@ input:checked + .slide-container .nav label {
   input#img-3:checked ~ .nav-dots label#img-dot-3,
   input#img-4:checked ~ .nav-dots label#img-dot-4,
   input#img-5:checked ~ .nav-dots label#img-dot-5,
-  input#img-6:checked ~ .nav-dots label#img-dot-6 {
+  input#img-6:checked ~ .nav-dots label#img-dot-6 input#img-7:checked ~ .nav-dots label#img-dot-7 {
     background: rgba(0, 0, 0, 0.8);
   }
 
@@ -797,7 +814,7 @@ input:checked + .slide-container .nav label {
   }
   .viden_img img {
     margin-top: 4.5rem;
-    border-radius: 30px;
+
     border-radius: 15px;
     width: 110%;
     height: auto;
@@ -828,5 +845,12 @@ input:checked + .slide-container .nav label {
     max-width: 55ch;
     text-align: justify;
     padding: 20px;
+  }
+  /***************************************ANIMATIOM**********************/
+  .grid4_1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 auto;
+    max-width: 1000px;
   }
 }

@@ -141,40 +141,77 @@
         <div><img src="other/2_2.webp" alt="computer"></div>
 
     </div>
-    <h2 class="projekt_name">MIT FØRSTE WEBSITE</h2>
-    <div class="wiper">
-        <button class="wiper-button wiper-button__right">
-            <img src="https://www.iconpacks.net/icons/2/free-arrow-left-icon-3099-thumb.png" alt="left">
-        </button>
-        <div class="wiper-wrapper">
-            <ul class="wiper-track">
-
-                <li class="wiper-item active-swipe">
-                    <img class="wiper__image" src="computer/4.png" alt="backgroundimage">
-
-                </li>
-                <li class="wiper-item">
-                    <img class="wiper__image" src="computer/1.webp" alt="backgroundimage">
-
-                </li>
-                <li class="wiper-item">
-                    <img class="wiper__image" src="computer/2.webp" alt="backgroundimage">
-
-                </li>
-                <li class="wiper-item">
-                    <img class="wiper__image" src="computer/3.webp" alt="backgroundimage">
-                </li>
-                <li class="wiper-item">
-                    <img class="wiper__image" src="computer/5.png" alt="backgroundimage">
-                </li>
+    <h2 class="projekt_name">fra ide til færdigt website</h2>
 
 
-            </ul>
-        </div>
-        <button class="wiper-button wiper-button__left">
-            <img src="https://www.iconpacks.net/icons/2/free-arrow-left-icon-3099-thumb.png" alt="right">
-        </button>
-    </div>
+    <base href="computer">
+    <ul class="slides">
+        <input type="radio" name="radio-btn" id="img-1" checked />
+        <li class="slide-container">
+            <div class="slide">
+                <img src="computer/wireframes.webp" />
+            </div>
+            <div class="nav">
+                <label for="img-6" class="prev">&#x2039;</label>
+                <label for="img-2" class="next">&#x203a;</label>
+            </div>
+        </li>
+
+        <input type="radio" name="radio-btn" id="img-2" />
+        <li class="slide-container">
+            <div class="slide">
+                <img src="computer/2.webp" />
+            </div>
+            <div class="nav">
+                <label for="img-1" class="prev">&#x2039;</label>
+                <label for="img-3" class="next">&#x203a;</label>
+            </div>
+        </li>
+
+        <input type="radio" name="radio-btn" id="img-3" />
+        <li class="slide-container">
+            <div class="slide">
+                <img src="computer/3.webp" />
+            </div>
+            <div class="nav">
+                <label for="img-2" class="prev">&#x2039;</label>
+                <label for="img-4" class="next">&#x203a;</label>
+            </div>
+        </li>
+
+        <input type="radio" name="radio-btn" id="img-4" />
+        <li class="slide-container">
+            <div class="slide">
+                <img src="computer/4.webp" />
+            </div>
+            <div class="nav">
+                <label for="img-3" class="prev">&#x2039;</label>
+                <label for="img-5" class="next">&#x203a;</label>
+            </div>
+        </li>
+
+        <input type="radio" name="radio-btn" id="img-5">
+        <li class="slide-container">
+            <div class="slide">
+                <img src="computer/5.webp" alt="website">
+            </div>
+            <div class="nav">
+                <label for="img-4" class="prev">&#x2039;</label>
+
+            </div>
+        </li>
+
+
+
+        <li class="nav-dots">
+            <label for="img-1" class="nav-dot" id="img-dot-1"></label>
+            <label for="img-2" class="nav-dot" id="img-dot-2"></label>
+            <label for="img-3" class="nav-dot" id="img-dot-3"></label>
+            <label for="img-4" class="nav-dot" id="img-dot-4"></label>
+            <label for="img-5" class="nav-dot" id="img-dot-5"></label>
+
+        </li>
+    </ul>
     <script src="menu.js"></script>
     <script src="slider.js"></script>
     <footer>lavet af Tanya</footer>
