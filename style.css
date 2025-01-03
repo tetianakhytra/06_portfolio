@@ -650,8 +650,57 @@ input:checked + .slide-container .nav label {
   margin: 0 auto;
   margin-top: 40px;
 }
+/******************om mig***************/
+.mig {
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 5%;
+}
+.reflexion_web_mig {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background-color: var(--secondary);
+}
+.text_om_mig {
+  padding: 60px;
+}
+.text_om_mig_1 {
+  text-align: justify;
+  padding: 30px;
+  line-height: 1.8;
+}
+.cv {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/****************icons med hjælp af www.w3schools.com**********/
+.social-icons i {
+  color: var(--secondary);
+  transition: color 0.3s ease, transform 0.3s ease;
+  margin: 0 10px;
+}
+.social-icons {
+  padding: 10px;
+  margin-left: 30%;
+}
+.social-icons i:hover {
+  transform: scale(1.2);
+  color: white;
+}
+.tak {
+  text-align: center;
+}
+.mig_1 {
+  display: none;
+}
 /***************************WEB desktop*********/
+
 @media (min-width: 1200px) {
+  .social-icons {
+    padding: 10px;
+    margin-left: 45%;
+  }
   .grid4_2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -906,5 +955,34 @@ input:checked + .slide-container .nav label {
     grid-template-columns: 1fr 1fr;
     margin: 0 auto;
     max-width: 1000px;
+  }
+  /**********************om mig*************/
+  .cv {
+    width: 30%;
+  }
+  .cv:hover {
+    scale: 1.4;
+  }
+  .mig {
+    display: none;
+  }
+  .mig_1 {
+    display: block;
+    width: 36%;
+    margin-left: 40%;
+    height: 100%;
+  }
+  .text_om_mig {
+    margin-top: 8%;
+    margin-right: 30%;
+  }
+  .text_om_mig_1 {
+    text-align: justify;
+    padding: 30px;
+    line-height: 1.8;
+  }
+  .reflexion_web_mig {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 }
