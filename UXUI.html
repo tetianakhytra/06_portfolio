@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=send" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=call" />
     <link
         href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Quattrocento:wght@400;700&family=Satisfy&display=swap"
         rel="stylesheet">
@@ -18,33 +22,52 @@
         href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Quattrocento+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Quattrocento:wght@400;700&family=Satisfy&display=swap"
         rel="stylesheet">
 
-    <title>UX/UI</title>
+    <title>Om mig</title>
+
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+
+
 
 </head>
+<header class="header">
+    <div class="logo">
+        <a href="index.html">
+            <img src="logo/logo.png" alt="Logo">
+        </a>
+    </div>
+    <nav>
+        <ul class="menu">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="web.html">WEB</a></li>
+            <li><a href="UXUI.html">UX/UI</a></li>
+            <li><a href="animation.html">ANIMATION</a></li>
+            <li><a href="inhold.html">INHOLD</a></li>
+            <li><a href="ommig.html">OM MIG</a></li>
+        </ul>
+    </nav>
+    <div class="icons">
+        <a href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_google-one-tap-submit" target="_blank"
+            rel="noopener noreferrer">
+            <i class="fab fa-linkedin fa-2x"></i>
+        </a>
+        <a href="mailto:tekh0001@stud.kea.dk">
+            <i class="fas fa-envelope fa-2x"></i>
+        </a>
+
+        <a href="https://www.pinterest.com/tanyahitra/" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-pinterest fa-2x"></i>
+        </a>
+    </div>
+    <div class="burger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+</header>
 
 <body>
-    <header class="header">
-        <div class="logo">
-            <a href="index.html">
-                <img src="logo/logo.png" alt="Logo">
-            </a>
-        </div>
-        <nav>
-            <ul class="menu">
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="web.html">WEB</a></li>
-                <li><a href="UXUI.html">UX/UI</a></li>
-                <li><a href="animation.html">ANIMATION</a></li>
-                <li><a href="inhold.html">INHOLD</a></li>
-                <li><a href="ommig.html">OM MIG</a></li>
-            </ul>
-            <div class="burger">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </div>
-        </nav>
-    </header>
+
     <h1>Grundlæggende UX / UI</h1>
     <h2>centrale metoder og teorier</h2>
 
@@ -118,6 +141,7 @@
                 tilfredshed at se min hobby blive præsenteret på en professionel måde og inspirere andre.</p>
         </div>
     </div>
+
     <h2 class="projekt_name">EMNESITE</h2>
 
     <div class="hide_desktop"><img src="emnesite/emnesite.webp" alt="emnesite"></div>
@@ -149,85 +173,6 @@
 
     <h2 class="projekt_name">fra ide til færdigt website</h2>
 
-    <div class="slider">
-        <base href="emnesite">
-        <ul class="slides">
-            <input type="radio" name="radio-btn" id="img-1" checked />
-            <li class="slide-container">
-                <div class="slide">
-                    <img src="emnesite/1.webp" />
-                </div>
-                <div class="nav">
-
-                    <label for="img-2" class="next">&#x203a;</label>
-                </div>
-            </li>
-
-            <input type="radio" name="radio-btn" id="img-2" />
-            <li class="slide-container">
-                <div class="slide">
-                    <img src="emnesite/9.webp" />
-                </div>
-                <div class="nav">
-                    <label for="img-1" class="prev">&#x2039;</label>
-                    <label for="img-3" class="next">&#x203a;</label>
-                </div>
-            </li>
-
-            <input type="radio" name="radio-btn" id="img-3" />
-            <li class="slide-container">
-                <div class="slide">
-                    <img src="emnesite/4.webp" />
-                </div>
-                <div class="nav">
-                    <label for="img-2" class="prev">&#x2039;</label>
-                    <label for="img-4" class="next">&#x203a;</label>
-                </div>
-            </li>
-
-            <input type="radio" name="radio-btn" id="img-4" />
-            <li class="slide-container">
-                <div class="slide">
-                    <img src="emnesite/5.webp" />
-                </div>
-                <div class="nav">
-                    <label for="img-3" class="prev">&#x2039;</label>
-                    <label for="img-5" class="next">&#x203a;</label>
-                </div>
-            </li>
-
-            <input type="radio" name="radio-btn" id="img-5" />
-            <li class="slide-container">
-                <div class="slide">
-                    <img src="emnesite/7.webp" />
-                </div>
-                <div class="nav">
-                    <label for="img-4" class="prev">&#x2039;</label>
-                    <label for="img-6" class="next">&#x203a;</label>
-                </div>
-            </li>
-
-            <input type="radio" name="radio-btn" id="img-6" />
-            <li class="slide-container">
-                <div class="slide">
-                    <img src="emnesite/6.webp" />
-                </div>
-                <div class="nav">
-                    <label for="img-5" class="prev">&#x2039;</label>
-
-                </div>
-            </li>
-
-            <li class="nav-dots">
-                <label for="img-1" class="nav-dot" id="img-dot-1"></label>
-                <label for="img-2" class="nav-dot" id="img-dot-2"></label>
-                <label for="img-3" class="nav-dot" id="img-dot-3"></label>
-                <label for="img-4" class="nav-dot" id="img-dot-4"></label>
-                <label for="img-5" class="nav-dot" id="img-dot-5"></label>
-                <label for="img-6" class="nav-dot" id="img-dot-6"></label>
-            </li>
-        </ul>
-    </div>
 
     <footer>
         <div class="social-icons">

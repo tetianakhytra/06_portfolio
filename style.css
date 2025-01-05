@@ -105,7 +105,6 @@ nav {
   color: var(--secondary);
 }
 
-/* Right-aligned icons */
 .icons {
   display: flex;
   gap: 1rem;
@@ -140,6 +139,9 @@ nav {
 }
 @media screen and (max-width: 800px) {
   .menu {
+    display: none;
+  }
+  .icons {
     display: none;
   }
   .burger {
@@ -190,7 +192,7 @@ font-family: "Satisfy"
   --primary: #e7e7dd;
   --secondary: #b8b1a7;
   --accent: #7e3549;
-  --brown: #3c2d2a;
+  --brown: #6b5450;
 
   --space-xxs: 0.25rem;
   --space-xs: 0.8rem;
@@ -210,6 +212,10 @@ h2 {
   text-align: center;
   margin-top: 2rem;
 }
+.reflexion_h2 {
+  margin-bottom: 0;
+  margin-top: 2rem;
+}
 h2 {
   font-size: var(--space-md);
   text-transform: uppercase;
@@ -218,8 +224,9 @@ h2 {
   margin-top: 0.5rem;
   text-align: center;
   margin: 0 auto;
-  margin-bottom: 1.5rem;
-  max-width: 55ch;
+
+  margin-top: 1rem;
+  margin-left: 20px;
 }
 h3 {
   font-family: "Baskervville";
@@ -234,8 +241,9 @@ ul {
   font-family: "Quattrocento";
   font-size: var(--space-xs);
   line-height: 18px;
-
+  max-width: 45ch;
   margin-bottom: 30px;
+  margin-left: 20px;
 }
 
 h1 {
@@ -773,7 +781,7 @@ input:checked + .slide-container .nav label {
     display: block;
     width: 90%;
     height: auto;
-    margin-top: 4.6rem;
+
     margin-left: 5rem;
   }
 
