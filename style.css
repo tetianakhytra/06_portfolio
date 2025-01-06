@@ -65,12 +65,10 @@ header {
   z-index: 30;
 }
 
-/* Logo */
 .logo img {
   width: 60px;
 }
 
-/* Centered menu */
 nav {
   flex-grow: 1;
   display: flex;
@@ -82,7 +80,7 @@ nav {
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 1.5rem;
+  gap: 1.8rem;
   margin-left: 50px;
 }
 
@@ -250,7 +248,11 @@ h1 {
   font-family: "Satisfy";
   font-size: var(--space-lg);
 }
-
+.om_website {
+  text-align: center;
+  font-size: 14px;
+  font-style: italic;
+}
 /**********************INDEX***********************/
 /*hero*/
 .herosection {
@@ -264,7 +266,7 @@ h1 {
 }
 .lottie {
   position: absolute;
-  top: 8%;
+  top: 5%;
   left: 20%;
   z-index: 1;
   object-fit: cover;
@@ -273,8 +275,8 @@ h1 {
 
 .name {
   position: absolute;
-  top: 38%;
-  left: 52%;
+  top: 36%;
+  left: 48%;
   transform: translate(-50%, -50%);
   text-align: center;
   font-size: 1.2rem;
@@ -283,19 +285,13 @@ h1 {
 .slogan {
   font-size: var(--space-xs);
   position: absolute;
-  top: 40%;
-  left: 50%;
+  top: 39%;
+  left: 49%;
   transform: translate(-50%, -50%);
   text-align: center;
 }
 .img1_1 img {
-  box-shadow: var(--accent) 15px -10px;
-  border-radius: 15px;
-  width: 80%;
-  height: auto;
-  margin: 0 auto;
-  margin-top: 2rem;
-  display: block;
+  display: none;
 }
 /*************knap****************/
 .knap a {
@@ -304,16 +300,16 @@ h1 {
   pointer-events: auto;
   font-family: "Quattrocento Sans";
   font-size: 12px;
-  font-weight: 400;
+  font-weight: 600;
   text-decoration: underline;
   text-transform: capitalize;
   position: absolute;
-  top: 50%;
-  left: 40%;
+  top: 48%;
+  left: 42%;
   text-align: center;
   padding: 8px 30px;
   border-radius: 5px;
-  border: 1px solid #000;
+  border: 1.4px solid #000;
 }
 .link a {
   z-index: 10;
@@ -336,29 +332,71 @@ h1 {
 .link {
   margin-top: 30px;
 }
+.projekt_link {
+  margin: 2rem;
+}
+.projekt_link a {
+  z-index: 10;
+  color: var(--accent);
+  pointer-events: auto;
+  font-family: "Quattrocento Sans";
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: underline;
+  text-transform: capitalize;
+
+  text-align: center;
+  padding: 8px 16px;
+  border-radius: 5px;
+  border: 1.5px solid #000;
+  margin-top: 30px;
+}
+.projekt_link_cv a {
+  z-index: 10;
+  color: var(--accent);
+  pointer-events: auto;
+  font-family: "Quattrocento Sans";
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: underline;
+  text-transform: capitalize;
+  margin: 0 auto;
+  text-align: center;
+  padding: 8px 16px;
+  border-radius: 5px;
+  border: 1.5px solid #000;
+  margin-top: 30px;
+  margin-left: 35%;
+}
+.projekt_link_cv a:hover {
+  color: var(--secondary);
+  background-color: transparent;
+  text-decoration: underline;
+}
 
 /********projekter**********/
+
 .projekter a {
   z-index: 20;
-  color: var(--brown);
+  color: var(--accent);
   pointer-events: auto;
   font-size: var(--space-xs);
   width: 250px;
+  margin-left: 70px;
   text-decoration: underline;
   text-align: center;
   padding: 8px 35px;
   border-radius: 5px;
-  border: 1px solid #000;
+  border: 1.4px solid #000;
   display: inline-block;
 }
 a:hover {
-  color: var(--accent);
+  color: var(--secondary);
   background-color: transparent;
   text-decoration: underline;
 }
 .projekter {
   margin-top: 25px;
-  margin-left: 22%;
 }
 .projekter h3 {
   text-align: center;
@@ -405,6 +443,9 @@ a:hover {
 
 @media (min-width: 1200px) {
   /****fonts****/
+  .reflexion_h2 {
+    font-size: 1.2rem;
+  }
   .reflexion_citat h2 {
     font-size: 1.3rem;
     text-align: left;
@@ -420,8 +461,17 @@ a:hover {
     font-size: var(--space-sm);
     text-align: left;
   }
+  /*****************index*********/
   .img1_1 img {
-    width: 30%;
+    display: block;
+    width: 60%;
+    margin-top: 5.5rem;
+    box-shadow: var(--accent) 15px -10px;
+    border-radius: 15px;
+  }
+  .grid1_0 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
   #hero {
     position: relative;
@@ -449,14 +499,14 @@ a:hover {
     font-size: var(--space-md);
     position: absolute;
     top: 64%;
-    left: 47%;
+    left: 48%;
     transform: translate(-50%, -50%);
     text-align: center;
   }
   .knap a {
     font-size: 18px;
     top: 75%;
-    left: 43%;
+    left: 44%;
     padding: 10px 35px;
   }
   .projekter a {
@@ -484,6 +534,7 @@ a:hover {
   }
   .projekter_h1 {
     text-align: center;
+    margin-left: 200px;
   }
   .projekter_columns {
     z-index: 10;
@@ -533,7 +584,11 @@ a:hover {
     margin-top: 20px;
   }
 }
-/***************************WEB**************************************/
+/******************WEB**********************/
+.grid_2_2_web {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
 
 .viden {
   margin: 20px;
@@ -553,122 +608,99 @@ li {
 
 .projekt_name {
   font-size: 1.2rem;
-  margin-top: 3rem;
+  padding-top: 2rem;
   color: var(--accent);
+  margin: 0 auto;
 }
 .teknology {
   margin-left: 60px;
 }
+.projekt_link {
+  margin-bottom: 2rem;
+}
 
-/***********************************************carousel********************************/
-
-.slides {
-  padding: 0;
-  width: 609px;
-  height: 420px;
-  display: block;
-  margin: 0 auto;
+/*********************carousel********************************/
+/*******med hjælp af Chat GPT*******/
+.slider {
   position: relative;
-}
+  width: 100%;
+  max-width: 360px;
+  overflow: hidden;
 
-.slides * {
-  user-select: none;
-  -ms-user-select: none;
-  -moz-user-select: none;
-  -khtml-user-select: none;
-  -webkit-user-select: none;
-  -webkit-touch-callout: none;
+  border-radius: 15px;
+  background: none;
+  margin: 0 auto;
+  margin-top: 1rem;
+  height: 218px;
 }
+.slider_inhold {
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+  height: 100%;
 
-.slides input {
-  display: none;
+  border-radius: 15px;
+  object-fit: cover;
+  margin: 0 auto;
+  margin-top: 1rem;
+  height: 218px;
+  overflow: hidden;
 }
+.slider-container {
+  display: flex;
 
-.slide-container {
-  display: block;
+  transition: transform 0.5s ease-in-out;
 }
 
 .slide {
-  top: 0;
-  opacity: 0;
-  width: 409px;
-  height: auto;
+  min-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-sizing: border-box;
+  background-color: #7e3549;
+}
+
+.slide img {
   display: block;
-  position: absolute;
-  top: 15%;
-  transform: scale(0);
-  right: 30%;
-  transition: all 0.7s ease-in-out;
-}
-
-.slide img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
-.slide img {
-  width: 100%;
-  height: 100%;
-}
-
-.nav label {
-  width: 180px;
-  height: 55%;
-  display: none;
+button {
   position: absolute;
-
-  opacity: 0;
-  z-index: 9;
+  top: 50%;
+  border-radius: 15px;
+  transform: translateY(-50%);
+  background: rgba(70, 12, 12, 0.511);
+  color: white;
+  border: none;
+  font-size: 1.6rem;
+  padding: 5px 10px;
   cursor: pointer;
+  z-index: 10;
 
-  transition: opacity 0.2s;
-
-  color: #fff;
-  font-size: 116pt;
-  text-align: center;
-  line-height: 200px;
-  font-family: "Varela Round", sans-serif;
-  background-color: rgba(255, 255, 255, 0.3);
-  text-shadow: 0px 0px 15px rgb(119, 119, 119);
+  outline: none;
 }
 
-.slide:hover + .nav label {
-  opacity: 0.5;
+button.prev {
+  left: 10px;
 }
 
-.nav label:hover {
-  opacity: 1;
+button.next {
+  right: 10px;
 }
 
-.nav .next {
-  right: 20%;
-  top: 15%;
-}
-.nav .prev {
-  top: 15%;
-  left: -10%;
-}
-
-input:checked + .slide-container .slide {
-  opacity: 1;
-
-  transform: scale(1);
-
-  transition: opacity 1s ease-in-out;
+@media (min-width: 1200px) {
+  .slider {
+    max-width: 600px;
+    height: 480px;
+  }
+  button {
+    font-size: 3rem;
+  }
 }
 
-input:checked + .slide-container .nav label {
-  display: block;
-}
-
-.nav-dots {
-  width: 100%;
-  bottom: 9px;
-  height: 11px;
-  display: block;
-  position: absolute;
-  text-align: center;
-}
 /**************************inhold**********************/
 .logo_virk {
   width: 75%;
@@ -676,7 +708,9 @@ input:checked + .slide-container .nav label {
   margin: 0 auto;
   margin-top: 40px;
 }
+
 /******************om mig***************/
+
 .mig {
   width: 60%;
   margin: 0 auto;
@@ -684,7 +718,7 @@ input:checked + .slide-container .nav label {
 }
 .reflexion_web_mig {
   margin-top: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
   background-color: var(--secondary);
 }
 .text_om_mig {
@@ -692,12 +726,16 @@ input:checked + .slide-container .nav label {
 }
 .text_om_mig_1 {
   text-align: justify;
-  padding: 30px;
+  margin: 0 auto;
+  padding-top: 30px;
   line-height: 1.8;
+  text-indent: 30px;
+  width: 45ch;
 }
 .cv {
   width: 80%;
   margin: 0 auto;
+  margin-top: 2rem;
 }
 
 /****************icons med hjælp af www.w3schools.com**********/
@@ -705,6 +743,7 @@ input:checked + .slide-container .nav label {
   color: var(--secondary);
   transition: color 0.3s ease, transform 0.3s ease;
   margin: 0 10px;
+  margin-left: 20%;
 }
 .social-icons {
   padding: 10px;
@@ -722,6 +761,9 @@ input:checked + .slide-container .nav label {
 /***************************WEB desktop*********/
 
 @media (min-width: 1200px) {
+  .grid_2_2_web {
+    width: 90%;
+  }
   .social-icons {
     padding: 10px;
     margin-left: 45%;
@@ -771,7 +813,7 @@ input:checked + .slide-container .nav label {
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: 0 auto;
-    max-width: 1000px;
+    max-width: 800px;
     gap: 20px;
   }
   .grid2_2 img {
@@ -783,140 +825,6 @@ input:checked + .slide-container .nav label {
     height: auto;
 
     margin-left: 5rem;
-  }
-
-  /*************carousel**********/
-
-  .slides {
-    padding: 0;
-    width: 609px;
-
-    display: block;
-    margin: 0 auto;
-    position: relative;
-  }
-  .slides img {
-    width: 100%;
-    height: auto;
-  }
-  .slides * {
-    user-select: none;
-    -ms-user-select: none;
-    -moz-user-select: none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
-    -webkit-touch-callout: none;
-  }
-
-  .slides input {
-    display: none;
-  }
-
-  .slide-container {
-    display: block;
-  }
-
-  .slide {
-    top: 0;
-    opacity: 0;
-    width: 609px;
-    height: 420px;
-    display: block;
-    position: absolute;
-    left: 0;
-    transform: scale(0);
-
-    transition: all 0.7s ease-in-out;
-  }
-
-  .slide img {
-    width: 100%;
-    height: auto;
-  }
-
-  .nav label {
-    width: 180px;
-    height: 60%;
-    display: none;
-    position: absolute;
-    bottom: 25%;
-    opacity: 0;
-    z-index: 9;
-    cursor: pointer;
-
-    transition: opacity 0.2s;
-
-    color: #fff;
-    font-size: 156pt;
-    text-align: center;
-    line-height: 280px;
-    font-family: "Varela Round", sans-serif;
-    background-color: rgba(255, 255, 255, 0.3);
-    text-shadow: 0px 0px 15px rgb(119, 119, 119);
-  }
-
-  .slide:hover + .nav label {
-    opacity: 0.5;
-  }
-
-  .nav label:hover {
-    opacity: 1;
-  }
-
-  .nav .next {
-    right: 0;
-    bottom: 60%;
-  }
-  .nav .prev {
-    right: 70%;
-    bottom: 2%;
-  }
-
-  input:checked + .slide-container .slide {
-    opacity: 1;
-
-    transform: scale(1);
-
-    transition: opacity 1s ease-in-out;
-  }
-
-  input:checked + .slide-container .nav label {
-    display: block;
-  }
-
-  .nav-dots {
-    width: 100%;
-    bottom: 9px;
-    height: 11px;
-    display: block;
-    position: absolute;
-    text-align: center;
-  }
-
-  .nav-dots .nav-dot {
-    top: -15%;
-    left: 18%;
-    width: 11px;
-    height: 11px;
-    margin: 0 4px;
-    position: relative;
-    border-radius: 100%;
-    display: inline-block;
-    background-color: rgba(0, 0, 0, 0.6);
-  }
-
-  .nav-dots .nav-dot:hover {
-    cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.8);
-  }
-
-  input#img-1:checked ~ .nav-dots label#img-dot-1,
-  input#img-2:checked ~ .nav-dots label#img-dot-2,
-  input#img-3:checked ~ .nav-dots label#img-dot-3,
-  input#img-4:checked ~ .nav-dots label#img-dot-4,
-  input#img-5:checked ~ .nav-dots label#img-dot-5,
-  input#img-6:checked ~ .nav-dots label#img-dot-6 input#img-7:checked ~ .nav-dots label#img-dot-7 {
-    background: rgba(0, 0, 0, 0.8);
   }
 
   /**************************UX/UI********************/
@@ -973,20 +881,38 @@ input:checked + .slide-container .nav label {
   }
   .hide_mobil {
     display: block;
+    margin-top: 4.5rem;
   }
-  /***************************************ANIMATIOM**********************/
+  /*******************ANIMATIOM**********************/
   .grid4_1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: 0 auto;
     max-width: 1000px;
   }
+
+  /************************inhold web*****************/
+  .logo_virk {
+    margin-top: 6.5rem;
+    width: 90%;
+    margin-left: 100px;
+  }
+  .grid4_2_img {
+    width: 90%;
+  }
+  .om_website {
+    text-align: center;
+    font-size: 18px;
+    font-style: italic;
+    margin-top: -2rem;
+    color: var(--brown);
+  }
   /**********************om mig*************/
   .cv {
     width: 30%;
   }
   .cv:hover {
-    scale: 1.4;
+    scale: 1.1;
   }
   .mig {
     display: none;
@@ -1009,5 +935,10 @@ input:checked + .slide-container .nav label {
   .reflexion_web_mig {
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+  .img5_1 {
+    width: 90%;
+    margin-top: 2rem;
+    margin-left: -50px;
   }
 }
