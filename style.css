@@ -4,19 +4,6 @@
  * @format
  */
 
-/* 
-font-family: "Baskervville"
-font-family: "Quattrocento" 
-font-family: "Satisfy" 
-*/
-
-/************footer***********/
-footer {
-  background-color: var(--accent);
-  height: 50px;
-  margin-top: 30px;
-}
-
 /**************** menu **************/
 
 * {
@@ -164,6 +151,12 @@ nav {
     font-size: 18px;
   }
 }
+/************footer***********/
+footer {
+  background-color: var(--accent);
+  height: 50px;
+  margin-top: 30px;
+}
 /**************FONTS og farve***********/
 /* 
 font-family: "Baskervville"
@@ -178,7 +171,7 @@ font-family: "Satisfy"
   --brown: #6b5450;
 
   --space-xxs: 0.25rem;
-  --space-xs: 0.8rem;
+  --space-xs: 0.8rem; /*p*/
   --space-sm: 0.9rem; /***h3**/
   --space-md: 1rem; /*h2*/
   --space-lg: 2.2rem; /**h1**/
@@ -190,6 +183,12 @@ p {
   line-height: 1.5;
   font-size: var(--space-xs);
 }
+h1 {
+  font-family: "Satisfy";
+  font-size: var(--space-lg);
+  margin-top: 1rem;
+}
+
 h1,
 h2 {
   text-align: center;
@@ -203,10 +202,8 @@ h2 {
   text-transform: uppercase;
   font-family: "Baskervville";
   color: var(--brown);
-
   text-align: center;
   margin: 0 auto;
-
   margin-top: 1rem;
 }
 h3 {
@@ -225,16 +222,6 @@ h3 {
   margin-bottom: 30px;
 }
 
-h1 {
-  font-family: "Satisfy";
-  font-size: var(--space-lg);
-  margin-top: 1rem;
-}
-.om_website {
-  text-align: center;
-  font-size: 14px;
-  font-style: italic;
-}
 .discription {
   color: #6b5450;
   margin-top: 0.5rem;
@@ -256,10 +243,10 @@ h1 {
 }
 .lottie {
   position: absolute;
-  top: 5%;
+  top: 3%;
   left: 17%;
   z-index: 1;
-  transform: scale(4);
+  transform: scale(3.6);
 }
 
 .name {
@@ -321,7 +308,8 @@ h1 {
 /********projekter**********/
 
 .projekter a {
-  z-index: 20;
+  position: relative;
+  z-index: 50;
   color: var(--accent);
   pointer-events: auto;
   font-size: var(--space-xs);
@@ -503,6 +491,7 @@ a:hover {
     text-transform: uppercase;
   }
   .grid1_1 {
+    z-index: 20;
     width: 100%;
     height: 50vh;
     gap: 20px;
@@ -630,7 +619,6 @@ button {
   padding: 5px 10px;
   cursor: pointer;
   z-index: 10;
-
   outline: none;
 }
 
@@ -651,8 +639,6 @@ button.next {
     font-size: 3rem;
   }
 }
-
-/**************************inhold**********************/
 
 /******************om mig***************/
 
@@ -774,12 +760,10 @@ button.next {
     grid-template-columns: 1fr 1fr;
     margin: 0 auto;
     width: 60%;
-
     gap: 20px;
   }
   .grid2_2 img {
     box-shadow: var(--accent) 15px -10px;
-
     border-radius: 15px;
     display: block;
     height: auto;
@@ -797,12 +781,9 @@ button.next {
   .Webudvikling {
     margin-top: 4rem;
   }
-  .testing {
-    margin-top: 4rem;
-  }
+
   .viden_img img {
     margin-top: 4.5rem;
-
     border-radius: 15px;
     width: 110%;
     height: auto;
@@ -843,7 +824,7 @@ button.next {
     margin-top: 2rem;
     margin-left: 18%;
   }
-  /*******************ANIMATIOM**********************/
+  /*******************ANIMATION**********************/
   .grid4_1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -861,13 +842,7 @@ button.next {
   .grid4_2_img {
     width: 90%;
   }
-  .om_website {
-    text-align: center;
-    font-size: 18px;
-    font-style: italic;
-    margin-top: -2rem;
-    color: var(--brown);
-  }
+
   .virksomhed_name {
     margin-top: 3rem;
   }
